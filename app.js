@@ -6,7 +6,7 @@ const app = express();
 
 
 // use it before all route definitions
-app.use(cors({origin: 'http://localhost:3000'}));
+app.use(cors({origin: '*'}));
 
 app.use(express.json({ limit: '10kb' }));
 
