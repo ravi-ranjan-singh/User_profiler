@@ -3,6 +3,7 @@ const catchAsync = require('./../utils/catchAsync');
 const AppError = require('./../utils/appError');
 
 exports.addAUser = catchAsync(async (req, res, next) => {
+  console.log(req.body)
   let user = await User.findOneAndUpdate({ Email: req.body.Email }, req.body, {
     new: true
   });
